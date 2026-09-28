@@ -1,39 +1,83 @@
-/* Basic Reset */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+  /* Bootswatch Cosmo values, matching the Quarto cosmo theme */
+  :root{
+    --primary:#2780e3;
+    --primary-dark:#1f66b6;
+    --body:#373a3c;
+    --muted:#6c757d;
+    --light:#f8f9fa;
+    --border:#dee2e6;
+    --max:1000px;
+  }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition-duration:0.01ms !important;}
+  }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
+  body{
+    margin:0;
+    background:#fff;
+    color:var(--body);
+    font-family:"Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size:1.05rem;
+    line-height:1.55;
+  }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
+  a{color:var(--primary); text-decoration:none;}
+  a:hover{color:var(--primary-dark); text-decoration:underline;}
+  :focus-visible{outline:2px solid var(--primary); outline-offset:3px;}
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
 
-section {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    margin-top: 20px;
-    border-radius: 8px;
-}
+  h1,h2,h3{font-weight:400; line-height:1.2; margin:0; color:var(--body);}
+
+  /* ---------- NAV ---------- */
+  .nav{background:var(--primary);}
+  .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:56px;}
+  .nav-brand{color:#fff; font-size:1.15rem; font-weight:600;}
+  .nav-brand:hover{color:#fff; text-decoration:none;}
+  .nav-links{display:flex; gap:24px; list-style:none; margin:0; padding:0;}
+  .nav-links a{color:rgba(255,255,255,.8); font-size:1rem;}
+  .nav-links a:hover{color:#fff; text-decoration:none;}
+
+  /* ---------- HERO (merged home + about) ---------- */
+  .hero{padding:72px 0 56px; background:var(--light); border-bottom:1px solid var(--border);}
+  .hero h1{font-size:clamp(2.2rem, 5vw, 3.2rem); margin-bottom:8px;}
+  .hero .role{color:var(--primary); font-size:1.2rem; font-weight:600; margin:0 0 20px;}
+  .hero p.intro{max-width:60ch; margin:0 0 28px; color:var(--body);}
+
+  .btn-row{display:flex; gap:12px; flex-wrap:wrap;}
+  .btn{display:inline-block; padding:.5rem 1.1rem; border:1px solid var(--primary); font-size:1rem; transition:background .15s ease, color .15s ease;}
+  .btn:hover{text-decoration:none;}
+  .btn-primary{background:var(--primary); color:#fff;}
+  .btn-primary:hover{background:var(--primary-dark); border-color:var(--primary-dark); color:#fff;}
+  .btn-outline{background:transparent; color:var(--primary);}
+  .btn-outline:hover{background:var(--primary); color:#fff;}
+
+  /* ---------- SECTIONS ---------- */
+  .block{padding:56px 0; border-bottom:1px solid var(--border);}
+  .block-head{margin-bottom:24px;}
+  .block-head h2{font-size:1.8rem;}
+  .block-head p{margin:6px 0 0; color:var(--muted);}
+
+  .skills{display:flex; flex-wrap:wrap; gap:10px; list-style:none; padding:0; margin:0 0 24px;}
+  .skills li{background:var(--light); border:1px solid var(--border); padding:.35rem .9rem; font-weight:600;}
+  .about-text{max-width:65ch; margin:0;}
+
+  /* cards */
+  .grid{display:grid; gap:20px;}
+  .grid-3{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));}
+  .card{display:flex; flex-direction:column; gap:8px; padding:22px; border:1px solid var(--border); background:#fff; color:var(--body); transition:border-color .15s ease, box-shadow .15s ease;}
+  .card:hover{border-color:var(--primary); box-shadow:0 2px 8px rgba(0,0,0,.08); text-decoration:none; color:var(--body);}
+  .card .tag{font-size:.8rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--primary);}
+  .card h3{font-size:1.3rem;}
+  .card p{margin:0; color:var(--muted); font-size:1rem;}
+  .card .go{margin-top:auto; padding-top:8px; color:var(--primary); font-weight:600;}
+
+  /* footer */
+  footer{padding:36px 0 56px; background:var(--light);}
+  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .footer-links{display:flex; gap:20px; list-style:none; padding:0; margin:0;}
+  .footer-note{color:var(--muted); font-size:.9rem;}

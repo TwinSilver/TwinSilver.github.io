@@ -1,33 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twin Silver — Data Analyst</title>
+<meta name="description" content="Data analyst working in Python, R, SQL, Excel, Tableau, and Power BI. Projects, dashboards, and writing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Corner of the Web</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="#home">Twin Silver</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/dashboards/">Dashboards</a></li>
+      <li><a href="/blogs/">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a developer learning how to host sites on GitHub Pages!</p>
-        </section>
-    </main>
+<!-- HERO: home + about merged -->
+<header class="hero" id="home">
+  <div class="wrap">
+    <h1>Hi, I'm [Your Name]</h1>
+    <p class="role">Data Analyst</p>
+    <p class="intro">
+      I turn messy data into decisions people can act on. My work covers
+      exploratory analysis, statistical modeling, and dashboards, from raw
+      data to a finished visual.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#work">See selected work</a>
+      <a class="btn btn-outline" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
 
-    <footer>
-        <p>&copy; 2026 My Name</p>
-    </footer>
+<!-- TOOLKIT + ABOUT text -->
+<section class="block" id="toolkit">
+  <div class="wrap">
+    <div class="block-head">
+      <h2>About &amp; toolkit</h2>
+    </div>
+    <ul class="skills">
+      <li>Python</li><li>R</li><li>SQL</li><li>Excel</li><li>Tableau</li><li>Power BI</li>
+    </ul>
+    <p class="about-text">
+      Replace this with 2 to 4 sentences on your background, the kind of
+      problems you like working on, and what you're focused on now.
+    </p>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="block-head">
+      <h2>Selected work</h2>
+      <p>Analysis write-ups and live Tableau Public dashboards.</p>
+    </div>
+    <div class="grid grid-3">
+      <a class="card" href="/projects/project-1/">
+        <span class="tag">Project</span>
+        <h3>Project title</h3>
+        <p>One line on the problem and what the analysis found.</p>
+        <span class="go">Read the write-up →</span>
+      </a>
+      <a class="card" href="https://public.tableau.com/app/profile/yourname/viz/YourDashboard" target="_blank" rel="noopener">
+        <span class="tag">Dashboard</span>
+        <h3>Dashboard title</h3>
+        <p>The question this dashboard answers, in one line.</p>
+        <span class="go">Open on Tableau Public →</span>
+      </a>
+      <a class="card" href="/blogs/post-1/">
+        <span class="tag">Blog</span>
+        <h3>Post title</h3>
+        <p>What the post covers and why it's useful.</p>
+        <span class="go">Read the post →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE -->
+<section class="block" id="explore">
+  <div class="wrap">
+    <div class="block-head"><h2>Explore more</h2></div>
+    <div class="grid grid-3">
+      <a class="card" href="/projects/"><h3>All projects</h3><p>Full write-ups of analysis work.</p><span class="go">Browse projects →</span></a>
+      <a class="card" href="/dashboards/"><h3>All dashboards</h3><p>Live Tableau Public visualizations.</p><span class="go">View dashboards →</span></a>
+      <a class="card" href="/blogs/"><h3>Blog</h3><p>Posts built with Quarto.</p><span class="go">Read the blog →</span></a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap footer-row">
+    <ul class="footer-links">
+      <li><a href="mailto:you@example.com">Email</a></li>
+      <li><a href="https://github.com/twinsilver" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="/resume.pdf">Resume</a></li>
+    </ul>
+    <span class="footer-note">Last updated Sep 2026</span>
+  </div>
+</footer>
 
 </body>
 </html>
