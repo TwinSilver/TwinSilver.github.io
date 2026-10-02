@@ -34,7 +34,12 @@
   h1,h2,h3{font-weight:400; line-height:1.2; margin:0; color:var(--body);}
 
   /* ---------- NAV ---------- */
-  .nav{background:var(--primary);}
+  .nav{
+  background:var(--primary);
+  position:sticky;
+  top:0;
+  z-index:100;
+  }
   .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:56px;}
   .nav-brand{color:#fff; font-size:1.15rem; font-weight:600;}
   .nav-brand:hover{color:#fff; text-decoration:none;}
